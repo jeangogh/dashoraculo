@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { OracleTracker } from "@/lib/oracle/universal-tracker";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,6 +38,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
       <body className={`${geistSans.variable} antialiased`}>
+        <OracleTracker appName="dashoraculo" />
         {children}
       </body>
     </html>
